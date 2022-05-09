@@ -13,23 +13,31 @@ fkSuper INT,
 FOREIGN KEY (fkSuper) REFERENCES Personagem(idPersonagem) 
 );
 
-CREATE TABLE Usuário (
-idUsuário INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE Usuario (
+idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(60),
 sobrenome VARCHAR(60),
 email VARCHAR(60),
 senha VARCHAR(60),
-idade INT,
 fkPersonagem INT,
 FOREIGN KEY (fkPersonagem) REFERENCES Personagem(idPersonagem)
 );
 
 CREATE TABLE Score (
 idScore INT AUTO_INCREMENT,
-fkUsuário INT,
-FOREIGN KEY (fkUsuário) REFERENCES Usuário(idUsuário), 
-PRIMARY KEY (idScore, fkUsuário),
+fkUsuario INT,
+FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario), 
+PRIMARY KEY (idScore, fkUsuario),
 qtdEsmeralda INT,
 dtInicio DATETIME,
 dtFinal DATETIME
 );
+
+INSERT INTO Personagem VALUES 
+(null, 'Sonic','Hedgehog', 2, 3, 5, 15, null),
+(null, 'Miles Tails','Prower', 2, 5, 3, 8, null),
+(null, 'Knuckles','Echidna', 5, 2, 3, 16, null);
+
+SELECT * FROM Personagem;
+
+
