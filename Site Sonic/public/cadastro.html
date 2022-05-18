@@ -31,7 +31,7 @@
             <h1 class="titulo">Projeto Sonic</h1>
             <ul class="navbar">
                 <li>
-                    <a href="./Intro.html">
+                    <a href="./Index.html">
                         Inicial
                     </a>
                 </li>
@@ -73,14 +73,6 @@
                     <span class="tipo_campo">Sobrenome:</span>
                     <input id="sobrenome_input" type="text" placeholder="Seu sobrenome">
 
-                    <span class="tipo_campo">Selecione seu Personagem favorito:</span>
-                    <select id="fkpersonagem_select">
-                        <option value="0">- Selecione o Personagem -</option>
-                        <option value="1">Sonic The Hedgehog </option>
-                        <option value="2">Miles Tails Prower </option>
-                        <option value="3">Knuckles The Echidna </option>
-                    </select>
-
                     <span class="tipo_campo">E-mail:</span>
                     <input id="email_input" type="text" placeholder="meuemail@provedor.com">
 
@@ -101,13 +93,35 @@
 
                 </div>
             </div>
+
+            <div class="card" id="medio">
+                <h2>Personagens!</h2>
+                <div class="formulario" id="formulario2">
+            
+                    <span class="tipo_campo">Selecione seu Personagem favorito:</span>
+                    <select id="fkpersonagem_select" onchange="personagem()">
+                        <option value="0">- Selecione o Personagem -</option>
+                        <option value="1">Sonic The Hedgehog </option>
+                        <option value="2">Miles Tails Prower </option>
+                        <option value="3">Knuckles The Echidna </option>
+                    </select>
+
+                    <img id="img_personagem" src="" style="height: 300px;">
+
+                </div>
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                </div>
+            </div>
         </div>
     </div>
 
     <!--footer inicio-->
     <div class="footer">
         <div class="container">
-            <h4>Feito com amor por um aluno &hearts;SPTech &copy; 2022</h4>
+            <h4>Feito por um fã e amante da série Sonic &hearts; SPTech &copy; 2022</h4>
         </div>
     </div>
     <!--footer fim-->
@@ -188,6 +202,18 @@
     }
 
     function personagem() {
+
+        var x = fkpersonagem_select.value
+
+        if (x == 1) {
+            img_personagem.src = 'personagens/sonic.png'
+        } else if (x == 2) {
+            img_personagem.src = 'personagens/tails.png'
+        } else if (x == 3) {
+            img_personagem.src = 'personagens/knuckles.png'
+        } else {
+            img_personagem.src = ''
+        }
 
     }
 
