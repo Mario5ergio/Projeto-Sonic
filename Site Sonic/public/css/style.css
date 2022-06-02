@@ -29,7 +29,7 @@ body {
 
 .header a {
   text-decoration: none;
-  color: #e3b062;
+  color: rgb(245, 248, 39);
 }
 
 .agora {
@@ -37,12 +37,12 @@ body {
 }
 
 .navbar {
-  width: 300px;
+  width: 350px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  color: #e3b062;
+  color: #ff0000;
 }
 
 
@@ -54,12 +54,52 @@ body {
   justify-content: flex-start;
 }
 
+/* INDEX */
+
+.quadrado{
+background-color: rgba(0, 0, 0, 0.6);
+margin-top: -20px;
+width: 1300px;
+height: 600px;
+border: yellow 3px solid;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+border-radius: 15px;
+}
+
+.conteudo{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 3px white solid;
+  border-radius: 5px;
+  color: white;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.imagem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 380px;
+  justify-content: space-between;
+}
+
+
 
 /* BANNER */
 
 .banner {
-  height: 600px;
+  height: 610px;
   padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   background-size: 100vmax;
 }
@@ -106,9 +146,9 @@ body {
 
 .banner .container .card {
   background-color: black;
-  margin-top: -20px;
+  margin-top: -125px;
   margin-left: 20px;
-  height: 500px;
+  height: 540px;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -215,15 +255,22 @@ input {
   margin-top: 5px;
 }
 
+.placeholder{
+  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .loading-div {
   width: 50px;
   margin: auto;
   display: none;
+  justify-content: center;
 }
 
 .loading-div img {
   height: 100px;
   width: 100px;
+  display: flex;
+  justify-content: center;
 }
 
 /* PAGINA DOS GRÁFICOS */
