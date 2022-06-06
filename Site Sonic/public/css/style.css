@@ -68,6 +68,22 @@ justify-content: space-between;
 border-radius: 15px;
 }
 
+.quadrado2{
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: -40px;
+  margin-left: 50px;
+  width: 550px;
+  height: 600px;
+  border: yellow 3px solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 15px;
+  color: white;
+  font-size: 25px;
+  flex-wrap: wrap;
+  }
+
 .conteudo{
   margin-left: 10px;
   margin-right: 10px;
@@ -85,12 +101,9 @@ border-radius: 15px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 400px;
-  height: 380px;
-  justify-content: space-between;
+  justify-content: center;
+  width: 100%;
 }
-
-
 
 /* BANNER */
 

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Projeto Sonic | Página Inicial</title>
+    <title>Projeto Sonic | Personagens</title>
 
     <script src="./js/funcoes.js"></script>
 
@@ -26,7 +26,7 @@
             <ul class="navbar">
                 <li>
                     <a href="./Index.html">
-                        Inicial
+                        Jogos
                     </a>
                 </li>
                 <li class="agora">
@@ -50,23 +50,26 @@
     <!--Conteúdo inicio-->
     <div class="banner" style="background-image: url(assets/imgs/personagens\ -\ background.jpg)">
         <div class="quadrado">
-            <div class="conteudo"><img src="assets/imgs/personagem-knuckles.jpg" height="225px">
+            <div class="conteudo"><img src="assets/imgs/personagem-knuckles.jpg" height="225px" onclick="knuckles()">
                 <div class="imagem">
-                    <img src="assets/imgs/knuckles - walk.gif" height="100px">
-                    <img src="assets/imgs/knuckles - run.gif" height="100px">
-                    <img src="assets/imgs/Knuckles - climb.gif" height="100px">
+                    <img id="knuckles_img" src="assets/imgs/knuckles-status.jpg" height="250px" width="398px" style="display: none;" onclick="knuckles2()">
+                    <img src="assets/imgs/knuckles - walk.gif" height="95px">
+                    <img src="assets/imgs/knuckles - run.gif" height="95px">
+                    <img src="assets/imgs/Knuckles - climb.gif" height="90px">
                     
                 </div>
             </div>
-            <div class="conteudo"><img src="assets/imgs/personagem-sonic.jpg" height="225px">  
+            <div class="conteudo"><img src="assets/imgs/personagem-sonic.jpg" height="225px" onclick="sonic()">  
                 <div class="imagem">
+                    <img id="sonic_img" src="assets/imgs/sonic-status.jpg" height="250px" width="398px" style="display: none;" onclick="sonic2()">
                     <img src="assets/imgs/sonic walk.gif" height="100px">
                     <img src="assets/imgs/sonic run.gif" height="100px">
                     <img src="assets/imgs/sonic spin.gif" height="100px">
                 </div>    
             </div>
-            <div class="conteudo"><img src="assets/imgs/personagem-tails.png" height="225px">
-                <div class="imagem">
+            <div class="conteudo"><img src="assets/imgs/personagem-tails.png" height="225px" onclick="tails()">
+                <div class="imagem" >
+                    <img id="tails_img" src="assets/imgs/tails-status.jpg" height="250px" width="398px" style="display: none;" onclick="tails2()">
                     <img src="assets/imgs/tails - walk.gif" height="100px">
                     <img src="assets/imgs/tails - run.gif" height="100px">
                     <img src="assets/imgs/tails - fly.gif" height="100px">  
@@ -88,3 +91,31 @@
 </body>
 
 </html>
+
+<script>
+
+    function knuckles(){
+        knuckles_img.style.display = "block"
+    }
+
+    function knuckles2(){
+        knuckles_img.style.display = "none"
+    }
+
+    function tails(){
+        tails_img.style.display = "block"
+    }
+
+    function tails2(){
+        tails_img.style.display = "none"
+    }
+
+    function sonic(){
+        sonic_img.style.display = "block"
+    }
+
+    function sonic2(){
+        sonic_img.style.display = "none"
+    }
+
+</script>
