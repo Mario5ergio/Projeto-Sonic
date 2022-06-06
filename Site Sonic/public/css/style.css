@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=VT323&display=swap');
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Kdam Thmor Pro', sans-serif;
   background-color: black;
 }
 
@@ -20,6 +20,7 @@ body {
 }
 
 .header {
+  height: 80px;
   border-bottom: 3px solid blue ;
 }
 
@@ -142,16 +143,24 @@ border-radius: 15px;
 /* FOOTER */
 
 .footer {
-  background-color: #000000;
+  background-color: #ffffff;
   border: 2px blue solid;
-  height: 75px;
-  color: #fff;
+  height: 69px;
+  color: rgb(26, 40, 245);
   display: flex;
-  font-size: 15px;
+  font-size: 40px;
 }
 
-.footer .container {
-  justify-content: center;
+.footer2{
+  width: 1000px;
+  margin-left: 340px;
+  margin-top: 6px;
+  font-weight: 800;
+}
+
+.footer.containerr {
+  justify-content: right;
+  margin-left: 120px;
 }
 
 
@@ -395,4 +404,23 @@ input {
 
 .simulador .container {
   flex-direction: column
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #ad6008;
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0460c9;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 3px solid #ad6008;
+  /* creates padding around scroll thumb */
 }
