@@ -426,11 +426,42 @@ body::-webkit-scrollbar-thumb {
 }
 
 .right-square{
-  color: black;
   margin-left: 25%;
-  background-color: white;
-  height: 650px;
+  height: 615px;
   width: 74.5%;
   border: blue 3px solid;
+  background-image: url('../assets/imgs/noticias-background.jpg');
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
 
+.noticias{
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-left: 50px;
+    width: 75%;
+    height: 85%;
+    border: yellow 3px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
+    font-size: 25px;
+    flex-wrap: wrap;
+}
+
+.jogar{
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-left: 50px;
+  width: 75%;
+  height: 85%;
+  border: yellow 3px solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+  flex-wrap: wrap;
 }
