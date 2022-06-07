@@ -318,8 +318,8 @@ input {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
+  border-right: 3px solid blue;
+  
   /* border: 3px solid pink; */
 }
 
@@ -334,7 +334,7 @@ input {
 }
 
 .header-left h1 {
-  color: #32b9cd;
+  color: blue;
 }
 
 .hello {
@@ -344,7 +344,7 @@ input {
 }
 
 .hello h3 {
-  color: #e3b062;
+  color: yellow;
   font-weight: 300;
   font-size: 1.2rem;
 }
@@ -356,7 +356,7 @@ input {
 .btn-nav {
   width: 40%;
   color: white;
-  background-color: #e6005a;
+  background-color: red;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
@@ -365,14 +365,14 @@ input {
 .btn-nav-white {
   width: 40%;
   background-color: white;
-  border: 3px solid #e6005a;
+  border: 3px solid blue;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
 }
 
 .btn-nav-white h3 {
-  color: #e6005a;
+  color: red;
   padding: 0;
   margin: 0;
 }
@@ -387,7 +387,7 @@ input {
   margin: 0;
   padding: 0;
   width: 20%;
-  background-color: #32b9cd;
+  background-color: blue;
   color: white;
   border-radius: 10px;
   text-align: center;
@@ -412,15 +412,15 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #ad6008;
+  background: yellow;
   /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #0460c9;
+  background-color: blue;
   /* color of the scroll thumb */
   border-radius: 20px;
   /* roundness of the scroll thumb */
-  border: 3px solid #ad6008;
+  border: 3px solid yellow;
   /* creates padding around scroll thumb */
 }
