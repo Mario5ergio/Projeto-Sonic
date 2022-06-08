@@ -15,7 +15,7 @@
 
 <!--validarSessao(),-->
 
-<body onload="">
+<body onload="validarSessao()">
 
     <div class="janela">
         <div class="header-left">
@@ -23,7 +23,7 @@
             <h1>Projeto Sonic</h1>
 
             <div class="hello">
-                <h3>Seja Muito Bem Vindo, <span id="b_usuario">usuário</span>!!!</h3>
+                <h3>Seja Muito Bem Vindo, <span id="b_usuario"></span>!!!</h3>
             </div>
 
             <div class="btn-nav">
@@ -44,6 +44,12 @@
                 </a>
             </div>
 
+            <div class="btn-nav">
+                <a href="grafico.html">
+                    <h3>Gráficos</h3>
+                </a>
+            </div>
+
             <div class="btn-logout" onclick="limparSessao()">
                 <h3>Sair</h3>
             </div>
@@ -51,18 +57,34 @@
     </div>
 
     <div class="right-square">
-        
-        <div class="noticias">
-            
-            <span id="span_btn" style="display: block;">
-            <button class="btn" onclick="btn_sorte()">Clique Aqui!</button>
-            </span>
 
-            <span id="span_msg" style="display: none;"></span></span>    
+        <div class="sorte">
+
+            <div id="div_btn" style="display: block;">
+
+                <button class="btn" onclick="btn_sorte()">Teste sua Sorte!</button>
+
+            </div>
+
+            <div id="div_msg" style="display: none;"></div>
+
+            <div id="div_img" style="display: none;">
+
+                <img src="" id="img_resultado" width="300px" height="200px">
+
+            </div>
+
+            <div id="div_btn2" style="display: none;">
+
+                <button class="btn" onclick="btn_voltar()">Tentar novamente!</button>
+
+            </div>
+
+            
 
         </div>
-</div>
-    
+    </div>
+
 </body>
 
 </html>
@@ -70,91 +92,46 @@
 <script>
 
 
-    function btn_sorte() {
+    function btn_sorte(){
 
         var x = [];
         var y = Number(0);
         var media = Number(0);
 
-        span_btn.style.display = `none`
-        span_msg.style.display = `block`
+        div_btn.style.display = `none`
+        div_msg.style.display = `block`
+        div_img.style.display = `block`
+        div_btn2.style.display = `block`
 
         for (let i = 0; i < 3; i++) {
-            y = parseInt(Math.random()*100).toFixed(1) 
+            y = parseInt(Math.random() * 100).toFixed(1)
             x.push(y)
-            span_msg.innerHTML += `<br>Seu ${i+1}° número foi ${x[0+i]}`
+            div_msg.innerHTML += `<br>Seu ${i + 1}° número foi ${x[0 + i]}`
         }
 
         media = (Number(x[0]) + Number(x[1]) + Number(x[2])) / 3
+        div_msg.innerHTML += `<br>Sua média foi de ${media.toFixed(1)}`
 
-        span_msg.innerHTML += `<br>Sua media foi de ${media.toFixed(1)}`
-
-        //obterDadosGrafico(1)
-
-
-    }
-
-// ---------------------------------------- GRÁFICO ------------------------------------------------------ //
-
-function obterDadosGrafico(idUsuario) {
-        
-        fetch(`/medidas/ultimas/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (resposta) {
-                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    resposta.reverse();
-
-                    plotarGrafico(resposta, idUsuario);
-                });
-            } else {
-                console.error('Nenhum dado encontrado ou erro na API');
-            }
-        })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            });
-    }
-
-    function plotarGrafico(resposta, idUsuario) {
-        console.log('iniciando plotagem do gráfico...');
-
-        var dados = {
-            type: 'bar',
-            labels: [],
-                datasets: [{
-                    label: 'Resultado da Sorte',
-                    backgroundColor: ['grey','red','green', 'blue','yellow', 'purple', 'orange', 'pink', 'gray', 'black', 'violet'],
-                    borderColor: [],
-                    data: [],
-                }]
-        };
-
-        for (i = 0; i < resposta.length; i++) {
-            var registro = resposta[i];
-            dados.labels.push(registro.sorte);
-            dados.datasets[0].data.push(registro.Testes);
+        if (media < 50) {
+            img_resultado.src = `assets/imgs/azar.gif`,
+            div_msg.innerHTML += `<br><div style="color: red;">Você está com Azar =(</div>`
         }
+        else[
+            img_resultado.src = `assets/imgs/sonic-tails-dance.gif`,
+            div_msg.innerHTML += `<br><div style="color: green;">Você está com Sorte =)</div>`
+        ]
 
-        console.log(JSON.stringify(dados));
-
-        var ctx = document.getElementById('canvas_grafico').getContext('2d');
-        window.myChart = new Chart(ctx, {
-            type: "bar",
-            data: dados,
-            options: {
-                scales: {
-                    yAxes: [
-                        {
-                            ticks: {
-                                beginAtZero: true,
-                            },
-                        },
-                    ],
-                },
-            },
-        });
+        
     }
 
+    function btn_voltar() {
 
+        div_msg.innerHTML = ``
+        div_btn.style.display = `block`
+        div_msg.style.display = `none`
+        div_img.style.display = `none`
+        div_btn2.style.display = `none`
 
-</script>
+    }
+
+    </script>

@@ -1,6 +1,6 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(sorte) {
+function buscarUltimasMedidas(Personagem) {
     
     instrucaoSql = ''
     
@@ -14,7 +14,7 @@ function buscarUltimasMedidas(sorte) {
                     where fk_aquario = ${idAquario}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `SELECT SUM(score.sorte) AS Sorte, count(idUsuario) AS 'Testes' FROM score JOIN Usuario ON fkScore = idScore group by fkScore;`
+        instrucaoSql = `SELECT Personagem.nome AS Personagem, COUNT(idUsuario) AS voto from Usuario JOIN Personagem on Usuario.fkPersonagem = Personagem.idPersonagem group by fkPersonagem;`
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return

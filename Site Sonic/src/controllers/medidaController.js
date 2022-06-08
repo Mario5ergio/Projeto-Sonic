@@ -2,11 +2,11 @@ var medidaModel = require("../models/medidaModel");
 
 function buscarUltimasMedidas(req, res) {
 
-    var sorte = req.params.sorte;
+    var Personagem = req.params.Personagem;
 
     console.log(`Recuperando as ultimas  medidas`);
 
-    medidaModel.buscarUltimasMedidas(sorte).then(function (resultado) {
+    medidaModel.buscarUltimasMedidas(Personagem).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {

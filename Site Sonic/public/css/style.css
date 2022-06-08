@@ -465,3 +465,17 @@ body::-webkit-scrollbar-thumb {
   font-size: 25px;
   flex-wrap: wrap;
 }
+
+.sorte{
+  background-color: rgba(0, 0, 0, 0.6);
+  border: yellow 3px solid;
+  height: 85%;
+  width: 35%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  flex-wrap: wrap;
+}
