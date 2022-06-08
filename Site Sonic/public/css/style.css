@@ -454,9 +454,9 @@ body::-webkit-scrollbar-thumb {
 
 .jogar{
   background-color: rgba(0, 0, 0, 0.6);
-  margin-left: 50px;
-  width: 75%;
-  height: 85%;
+  margin-left: 40px;
+  width: 90%;
+  height: 90%;
   border: yellow 3px solid;
   display: flex;
   flex-direction: row;
@@ -478,4 +478,5 @@ body::-webkit-scrollbar-thumb {
   color: white;
   font-size: 25px;
   flex-wrap: wrap;
+  border-radius: 15px;
 }

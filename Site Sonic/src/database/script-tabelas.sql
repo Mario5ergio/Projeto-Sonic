@@ -4,6 +4,9 @@
 
 /* para workbench - local - desenvolvimento */
 
+CREATE DATABASE ProjetoSonic;
+USE ProjetoSonic;
+
 CREATE TABLE Personagem (
 idPersonagem INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(60),
